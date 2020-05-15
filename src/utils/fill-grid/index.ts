@@ -28,7 +28,7 @@ function fillGrid(grid: GRID) {
     col = i % 9
 
     if (grid[row][col] === 0) {
-      shuffle(numbers)
+      Shuffle(numbers)
       // Do stuff
       // recursive things
       break
