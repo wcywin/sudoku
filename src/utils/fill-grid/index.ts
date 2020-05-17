@@ -31,9 +31,13 @@ function fillGrid(grid: GRID) {
       Shuffle(numbers)
 
       for (let value of numbers) {
-        // is it not in the grid row?
         if (!isInRow({ grid, row, value })) {
           if (!isInCol({ col, grid, value })) {
+            const square = [
+              [0,0,0],
+              [0,0,0],
+              [0,0,0]
+            ]
             // is it not in the grid square
             // ........ if this is the case
 
