@@ -1,5 +1,5 @@
 import { GRID, NUMBERS } from 'typings'
-import { isInCol, isInRow, Shuffle } from 'utils'
+import { IdentifySquare, isInCol, isInRow, isInSquare, Shuffle } from 'utils'
 
 const gridExample: GRID = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -33,11 +33,10 @@ function fillGrid(grid: GRID) {
       for (let value of numbers) {
         if (!isInRow({ grid, row, value })) {
           if (!isInCol({ col, grid, value })) {
-            const square = [
-              [0,0,0],
-              [0,0,0],
-              [0,0,0]
-            ]
+            const square = IdentifySquare({ col, grid, row })
+            if (!isInSquare) {
+
+            }
             // is it not in the grid square
             // ........ if this is the case
 

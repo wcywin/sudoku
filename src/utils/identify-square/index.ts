@@ -12,7 +12,7 @@ interface IInput {
  * @param grid
  * @param row
  */
-function identifyWorkingSquare({ col, grid, row }: IInput): SQUARE {
+function IdentifySquare({ col, grid, row }: IInput): SQUARE {
   const square = []
   if (row < 3) {
     if (col < 3) {
@@ -61,4 +61,4 @@ function identifyWorkingSquare({ col, grid, row }: IInput): SQUARE {
   return square as SQUARE
 }
 
-export default identifyWorkingSquare
+export default IdentifySquare

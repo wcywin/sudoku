@@ -1,5 +1,5 @@
 import { GRID, SQUARE } from 'typings'
-import identifyWorkingSquare from './index'
+import IdentifySquare from './index'
 
 describe('IdentifySquare', () => {
   it('Identifies the correct square with a given grid, row index and column index', () => {
@@ -14,17 +14,17 @@ describe('IdentifySquare', () => {
       [2, 8, 5, 9, 6, 3, 7, 1, 4],
       [3, 1, 9, 3, 2, 7, 8, 5, 6]
     ]
-    expect(identifyWorkingSquare({ col: 2, grid, row: 2 })).toStrictEqual([
+    expect(IdentifySquare({ col: 2, grid, row: 2 })).toStrictEqual([
       [8, 4, 2],
       [5, 3, 7],
       [6, 9, 1]
     ])
-    expect(identifyWorkingSquare({ col: 5, grid, row: 5 })).toStrictEqual([
+    expect(IdentifySquare({ col: 5, grid, row: 5 })).toStrictEqual([
       [8, 4, 5],
       [1, 9, 2],
       [3, 7, 6]
     ])
-    expect(identifyWorkingSquare({ col: 8, grid, row: 8 })).toStrictEqual([
+    expect(IdentifySquare({ col: 8, grid, row: 8 })).toStrictEqual([
       [2, 3, 9],
       [7, 1, 4],
       [8, 5, 6]
