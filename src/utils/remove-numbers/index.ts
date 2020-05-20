@@ -25,15 +25,10 @@ function removeNumbers(grid: GRID, attempts = 5): GRID {
     global.counter = 0
     solveGrid(gridCopy)
 
-    // attempt to solve the grid
     if (global.counter !== 1) {
       grid[row][col] = backup
       attempts--
     }
-
-    // if the global counter is not 1
-    //    grid[row][col] = backup
-    //    decrement attempts
   }
 
   return grid
